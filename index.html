@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageAholic</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro" rel="stylesheet" />
+    <style>
+        canvas {
+            background: #FFFFFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper w-[100vw] h-[100vh] overflow-x-hidden overflow-y-auto relative">
+        <!-- Navigation Bar -->
+        <nav class="bg-transparent">
+            <div class="flex w-[1080px] mx-auto justify-between items-center">
+                <a href="" class="cursor-pointer flex">
+                    <img src="./images/logo.png" alt="" class="w-12 h-auto">
+                    <h1 class="font-black text-2xl py-2 px-2 font-silkscreen text-center select-none">Imageaholic</h1>
+                </a>
+                <ul class="flex gap-6">
+                    <li>
+                        <a class="font-sourcecodepro py-7 font-black cursor-pointer transition-shadow duration-200 hover:text-fuchsia-400"
+                            href="">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a class="font-sourcecodepro py-7 font-black cursor-pointer transition-shadow duration-200 hover:text-fuchsia-400"
+                            href="">
+                            Encryption Decryption
+                        </a>
+                    </li>
+                    <li>
+                        <a class="font-sourcecodepro py-7 font-black cursor-pointer transition-shadow duration-200 hover:text-fuchsia-400"
+                            href="">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Hero-Section -->
+        <section>
+            <!-- <canvas id="canvas" class="-z-1 absolute"></canvas> -->
+            <div class="w-10/12 max-w-[1080px] h-10/12 max-h-[1080px] mx-auto flex justify-center items-center">
+                <canvas id="canvas" class=""></canvas>
+                <h1 class="font-black  font-silkscreen text-8xl py-40 text-center absolute select-none">Image
+                    Steganography</h1>
+            </div>
+        </section>
+        <!-- about us section -->
+        <section class="bg-white my-20">
+            <!-- <img src="" alt=""> -->
+            <div class="w-10/12 max-w-[1080px] pt-4 mx-auto relative">
+                <img class="absolute w-[233px] left-[300px] -top-[6rem] z-10" loading="lazy"
+                    src="./images/feature-section1-dottedrows.png" alt="">
+                <img loading="lazy" class="absolute w-[233px] -right-[3.5rem] -top-[6rem] z-10"
+                    src="./images/feature-section1-dottedrows.png" alt="">
+                <div class="w-full grid gap-y-10 gap-x-4 relative z-[100]
+            grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-black border-4 rounded-md p-2.5">
+                    <!-- item 1 -->
+                    <div class="relative flex items-center justify-center z-0">
+                        <h2 class="text-deepBlueHead font-silkscreen font-extrabold text-4xl
+                    leading-[3.375rem] text-fuchsia-400">
+                            About Us
+                        </h2>
+                    </div>
+                    <!-- card 1 -->
+                    <div class="bg-[url(/images/instant-settlement-bg.svg)] w-full max-h-[300px]
+                cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10 bg-white">
+                        <img class="w-10 h-10 " src="./images/image-file.png" alt="">
+                        <h3 class="font-sourcecodepro text-xl pt-4 font-bold">Steganography
+                        </h3>
+                        <p class="font-sourcecodepro py-3 text-grayText leading-normal">Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. M
+                            agni quas a earum pariatur nulla accusantium fugiat omnis consequuntur voluptatem animi!
+                        </p>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="bg-[url(/images/instant-settlement-bg.svg)] w-full max-h-[300px]
+                cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10 bg-white">
+                        <img class="w-10 h-10" src="./images/image-processing.png" alt="">
+                        <h3 class="font-sourcecodepro text-xl pt-4 font-bold">Undetected
+                        </h3>
+                        <p class="font-sourcecodepro py-3 text-grayText leading-normal">Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. M
+                            agni quas a earum pariatur nulla accusantium fugiat omnis consequuntur voluptatem animi!
+                        </p>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="bg-[url(/images/instant-settlement-bg.svg)] w-full max-h-[300px]
+                cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10 bg-white">
+                        <img class="w-10 h-10" src="./images/encryption-icon.svg" alt="">
+                        <h3 class="font-sourcecodepro text-xl pt-4 font-bold">Encryption
+                        </h3>
+                        <p class="font-sourcecodepro py-3 text-grayText leading-normal">Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. M
+                            agni quas a earum pariatur nulla accusantium fugiat omnis consequuntur voluptatem animi!
+                        </p>
+                    </div>
+                    <!-- card 4 -->
+                    <div class="bg-[url(/images/instant-settlement-bg.svg)] w-full max-h-[300px]
+                cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10 bg-white">
+                        <img class="w-10 h-10" src="./images/data-encryption-svgrepo-com.svg" alt="">
+                        <h3 class="font-sourcecodepro text-xl pt-4 font-bold">Decryption
+                        </h3>
+                        <p class="font-sourcecodepro py-3 text-grayText leading-normal">Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. M
+                            agni quas a earum pariatur nulla accusantium fugiat omnis consequuntur voluptatem animi!
+                        </p>
+                    </div>
+                    <!-- card 5 -->
+                    <div class="bg-[url(/images/instant-settlement-bg.svg)] w-full max-h-[300px]
+                cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10 bg-white">
+                        <img class="w-10 h-10" src="./images/hide-private-hidden-icon.svg" alt="">
+                        <h3 class="font-sourcecodepro text-xl pt-4 font-bold">Safety
+                        </h3>
+                        <p class="font-sourcecodepro py-3 text-grayText leading-normal">Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. M
+                            agni quas a earum pariatur nulla accusantium fugiat omnis consequuntur voluptatem animi!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- feature section -->
+        <section class="pt-[5rem] pb-[5rem] mt-14">
+            <div class="w-10/12 max-w-[1080px] pt-4 mx-auto relative">
+                <h2 class="text-deepBlueHead font-silkscreen font-extrabold text-4xl
+                leading-[3.375rem] text-fuchsia-400 text-center">Try it Yourself
+                </h2>
+                <div class="w-6 h-1 bg-greenLight mx-auto mt-4 mb-6"></div>
+                <!-- main feature box -->
+                <div class="w-full min-h[440px] flex flex-col relative">
+                    <img src="./images/x-flame-1.png" alt="" loading="lazy"
+                        class="absolute -top-[142px] -left-[140px] w-[200px]">
+                    <img src="./images/x-flame-2.png" alt="" loading="lazy"
+                        class="absolute top-[150px] -right-[180px] w-[270px]">
+                    <!-- content box -->
+                    <div
+                        class="w-full min-h-[520px] flex rounded-md relative p-10 py-12 border border-slate-700 bg-black">
+                        <!-- left part -->
+                        <div class="flex flex-col justify-between items-center w-full">
+                            <h3 class="font-sourcecodepro text-[28px] leading-10 font-bold max-w-[500px] text-white">
+                                Encrypt
+                            </h3>
+                            <ul class="space-y-2">
+                                <li class="font-sourcecodepro flex items-center space-x-2 text-white">
+                                    <i data-feather="check" class="text-white"></i>
+                                    <span>Provide an input image.</span>
+                                </li>
+                                <li class="font-sourcecodepro flex items-center space-x-2 text-white">
+                                    <i data-feather="check" class="text-white"></i>
+                                    <span>Provide sensitive info you want to hide.</span>
+                                </li>
+                                <li class="font-sourcecodepro flex items-center space-x-2 text-white">
+                                    <i data-feather="check" class="text-white"></i>
+                                    <span>Leave the rest to us.</span>
+                                </li>
+                                <li class="font-sourcecodepro flex items-center space-x-2 text-white">
+                                    <i data-feather="check" class="text-white"></i>
+                                    <span>Click on the button below to get started.</span>
+                                </li>
+                            </ul>
+                            <div class="flex flex-col-reverse md:flex-row items-center space-x-4 ">
+                                <button class="relative bg-black flex items-center 
+                                md:justify-start place-content-center text-white py-[14px] px-[18px]
+                                rounded-md font-sourcecodepro font-bold hover:border-white border-4 border-black">
+                                    Encipher
+                                    <svg viewBox="0 0 24 24" focusable="false" class="w-[20px] h-[20px] ml-4">
+                                        <path fill="white" class="hover:text-white"
+                                            d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- left part -->
+                        <div class="flex flex-col justify-between items-center w-full">
+                            <h3 class="font-sourcecodepro text-[28px] leading-10 font-bold max-w-[500px] text-white">
+                                Decrypt
+                            </h3>
+                            <ul class="space-y-2">
+                                <li class="font-sourcecodepro flex items-center space-x-2 text-white">
+                                    <i data-feather="check" class="text-white"></i>
+                                    <span>Provide the image with data inside it.</span>
+                                </li>
+                                <li class="font-sourcecodepro flex items-center space-x-2 text-white">
+                                    <i data-feather="check" class="text-white"></i>
+                                    <span>Provide the password.</span>
+                                </li>
+                                <li class="font-sourcecodepro flex items-center space-x-2 text-white">
+                                    <i data-feather="check" class="text-white"></i>
+                                    <span>Leave the rest to us.</span>
+                                </li>
+                                <li class="font-sourcecodepro flex items-center space-x-2 text-white">
+                                    <i data-feather="check" class="text-white"></i>
+                                    <span>Click on the button below to get started.</span>
+                                </li>
+                            </ul>
+                            <div class="flex flex-col-reverse md:flex-row items-center space-x-4 ">
+                                <button class="relative bg-black flex items-center 
+                                md:justify-start place-content-center text-white py-[14px] px-[18px]
+                                rounded-md font-sourcecodepro font-bold hover:border-white border-4 border-black">
+                                    Decipher
+                                    <svg viewBox="0 0 24 24" focusable="false" class="w-[20px] h-[20px] ml-4">
+                                        <path fill="white" class="hover:text-white"
+                                            d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- contact us section -->
+        <section class="pt-[5rem] pb-[5rem]">
+            <div class="w-10/12 max-w-[1080px] mx-auto relative flex flex-col gap-20 justify-between">
+                <h1 class="text-deepBlueHead font-silkscreen font-extrabold text-4xl
+                leading-[3.375rem] text-fuchsia-400 text-center">Contact Us</h1>
+                <p class="font-sourcecodepro text-xl pt-4 font-bold text-center">Provide any feedback or Ask a question.<br>We will get back to reply ASAP</p>
+                <form action="https://formsubmit.co/f4490996f3739d646a86bb50da22037b" method="POST" class="mx-auto flex flex-col justify-between gap-4 font-sourcecodepro">
+                    <input type="hidden" name="_subject" value="New submission!">
+                    <!-- <input type="hidden" name="_captcha" value="false"> -->
+                    <input class="appearance-none py-2 px-3 border shadow-md focus:border-fuchsia-400 focus:outline-none focus:shadow-fuchsia-400" type="text" name="name" required placeholder="Enter Your Name">
+                    <input class="appearance-none py-2 px-3 border shadow-md focus:border-fuchsia-400 focus:outline-none focus:shadow-fuchsia-400" type="email" name="email" required placeholder="Email Address">
+                    <input class="appearance-none py-2 px-3 border shadow-md focus:border-fuchsia-400 focus:outline-none focus:shadow-fuchsia-400" type="tel" name="number" required placeholder="Mobile Number">
+                    <textarea class="appearance-none py-2 px-3 border shadow-md focus:border-fuchsia-400 focus:outline-none focus:shadow-fuchsia-400" name="message" id="message-box" cols="30" rows="10" placeholder="Message"></textarea>
+                    <input type="hidden" name="_autoresponse" value="Thanks for filling out the form">
+                    <input type="hidden" name="_template" value="table">
+                    <button type="submit" class="relative bg-white border-black text-black flex items-center 
+                    md:justify-start place-content-center py-[14px] px-[18px]
+                    rounded-md font-sourcecodepro font-bold hover:border-fuchsia-400 hover:bg-black hover:text-white
+                    border-4 mx-auto w-[50%] mt-5"><p class="mx-auto">Submit</p></button>
+               </form>
+            </div>
+        </section>
+        <!-- made-with-love-section -->
+        <section>
+            <div class="w-10/12 max-w-[1080px] mx-auto relative">
+                <p class="text-center font-silkscreen select-none">Made with ❤️ by Team strawHat</p>
+            </div>
+        </section>
+        <script src="./dots.js"></script>
+        <script>
+            feather.replace()
+        </script>
+    </div>
+</body>
+
+</html>
