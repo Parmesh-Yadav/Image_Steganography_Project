@@ -19,7 +19,7 @@
     </style>
 </head>
 
-<body>
+<body class="scroll-smooth">
     <div class="wrapper w-[100vw] h-[100vh] overflow-x-hidden overflow-y-auto relative">
         <!-- Navigation Bar -->
         <nav class="bg-transparent">
@@ -31,19 +31,19 @@
                 <ul class="flex gap-6">
                     <li>
                         <a class="font-sourcecodepro py-7 font-black cursor-pointer transition-shadow duration-200 hover:text-fuchsia-400"
-                            href="">
+                            href="#about-us">
                             About Us
                         </a>
                     </li>
                     <li>
                         <a class="font-sourcecodepro py-7 font-black cursor-pointer transition-shadow duration-200 hover:text-fuchsia-400"
-                            href="">
+                            href="#try-it-yourself">
                             Encryption Decryption
                         </a>
                     </li>
                     <li>
                         <a class="font-sourcecodepro py-7 font-black cursor-pointer transition-shadow duration-200 hover:text-fuchsia-400"
-                            href="">
+                            href="#contact-us">
                             Contact Us
                         </a>
                     </li>
@@ -60,7 +60,7 @@
             </div>
         </section>
         <!-- about us section -->
-        <section class="bg-white my-20">
+        <section class="bg-white my-20" id="about-us">
             <!-- <img src="" alt=""> -->
             <div class="w-10/12 max-w-[1080px] pt-4 mx-auto relative">
                 <img class="absolute w-[233px] left-[300px] -top-[6rem] z-10" loading="lazy"
@@ -140,7 +140,7 @@
             </div>
         </section>
         <!-- feature section -->
-        <section class="pt-[5rem] pb-[5rem] mt-14">
+        <section class="pt-[5rem] pb-[5rem] mt-14" id="try-it-yourself">
             <div class="w-10/12 max-w-[1080px] pt-4 mx-auto relative">
                 <h2 class="text-deepBlueHead font-silkscreen font-extrabold text-4xl
                 leading-[3.375rem] text-fuchsia-400 text-center">Try it Yourself
@@ -182,15 +182,17 @@
                                 <button class="relative bg-black flex items-center 
                                 md:justify-start place-content-center text-white py-[14px] px-[18px]
                                 rounded-md font-sourcecodepro font-bold hover:border-white border-4 border-black">
+                                <a href="./encode.html" class="flex items-center">
                                     Encipher
                                     <svg viewBox="0 0 24 24" focusable="false" class="w-[20px] h-[20px] ml-4">
                                         <path fill="white" class="hover:text-white"
                                             d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
                                     </svg>
+                                </a>
                                 </button>
                             </div>
                         </div>
-                        <!-- left part -->
+                        <!-- right part -->
                         <div class="flex flex-col justify-between items-center w-full">
                             <h3 class="font-sourcecodepro text-[28px] leading-10 font-bold max-w-[500px] text-white">
                                 Decrypt
@@ -217,11 +219,13 @@
                                 <button class="relative bg-black flex items-center 
                                 md:justify-start place-content-center text-white py-[14px] px-[18px]
                                 rounded-md font-sourcecodepro font-bold hover:border-white border-4 border-black">
+                                <a href="" class="flex items-center">
                                     Decipher
                                     <svg viewBox="0 0 24 24" focusable="false" class="w-[20px] h-[20px] ml-4">
                                         <path fill="white" class="hover:text-white"
                                             d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
                                     </svg>
+                                </a>
                                 </button>
                             </div>
                         </div>
@@ -229,7 +233,7 @@
                 </div>
         </section>
         <!-- contact us section -->
-        <section class="pt-[5rem] pb-[5rem]">
+        <section class="pt-[5rem] pb-[5rem]" id="contact-us">
             <div class="w-10/12 max-w-[1080px] mx-auto relative flex flex-col gap-20 justify-between">
                 <h1 class="text-deepBlueHead font-silkscreen font-extrabold text-4xl
                 leading-[3.375rem] text-fuchsia-400 text-center">Contact Us</h1>
