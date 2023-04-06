@@ -12,9 +12,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro" rel="stylesheet" />
+    <style>
+        @keyframes rotate {
+            from{
+                rotate: 0deg;
+            }
+            50%{
+                scale: 1 1.5;
+            }
+            to{
+                rotate: 360deg;
+            }
+        }
+        #blob{
+            animation: rotate 20s infinite;
+            /* filter: blur(150px); */
+        }
+    </style>
 </head>
 
-<body class="scroll-smooth">
+<body class="overflow-x-hidden overflow-y-hidden">
+    <div id="blob" class="bg-fuchsia-300 h-[500px] aspect-square absolute -z-11left[50%] top[50%] translate-x-[-50%] translate-y-[-50%] rounded-full blur-[120px]"></div>
     <!-- main section -->
     <section class="pt-[5rem] pb-[5rem] mt-14" id="try-it-yourself">
         <div class="w-10/12 max-w-[1080px] pt-4 mx-auto relative">
@@ -90,6 +108,7 @@
                 </div>
             </div>
     </section>
+    <script src="./blob.js"></script>
     <script>
         feather.replace()
     </script>
