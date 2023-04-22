@@ -96,22 +96,24 @@ class HuffmanNode {
   
     return decodedString;
   }
-  var imgdatauri;
 
+  var imgdatauri;
   function readURL(input) {
     if (input.files && input.files[0]) {
       var reader = new FileReader();
-
       reader.onload = function(e) {
         imgdatauri = e.target.result;
+        // console.log(imgdatauri);
+        document.querySelector("#img1").src = imgdatauri;
       };
     }
     reader.readAsDataURL(input.files[0]);
   }
   function hidetext(){
-    var text = document.getElementById("data-box").value;
-    alert(text);
-    console.log(steg.encode(text, imgdatauri));
+    // var text = document.querySelector("#data-box").value;
+    // alert(text);
+    // console.log("read the text");
+    console.log(steg.encode(document.querySelector("#data-box").value, imgdatauri));
   }
   
   // decodeButton.addEventListener('click', () => {
