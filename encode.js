@@ -98,6 +98,7 @@ class HuffmanNode {
   }
 
   var imgdatauri;
+  var resultimg;
   function readURL(input) {
     if (input.files && input.files[0]) {
       var reader = new FileReader();
@@ -109,11 +110,31 @@ class HuffmanNode {
     }
     reader.readAsDataURL(input.files[0]);
   }
+  function downloadImage(url, filename) {
+    var canvas = document.createElement('canvas');
+    var ctx = canvas.getContext('2d');
+    var img = new Image();
+    img.onload = function() {
+      canvas.width = img.width;
+      canvas.height = img.height;
+      ctx.drawImage(img, 0, 0);
+      var dataURL = canvas.toDataURL('image/png');
+      var a = document.createElement('a');
+      a.href = dataURL;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    };
+    img.src = url;
+  }
   function hidetext(){
     // var text = document.querySelector("#data-box").value;
     // alert(text);
     // console.log("read the text");
-    console.log(steg.encode(document.querySelector("#data-box").value, imgdatauri));
+    resultimg=steg.encode(document.querySelector("#data-box").value, imgdatauri);
+    console.log(resultimg);
+    downloadImage(resultimg, 'my-image.jpg');
   }
   
   // decodeButton.addEventListener('click', () => {
