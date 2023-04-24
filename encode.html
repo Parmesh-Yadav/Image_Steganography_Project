@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro" rel="stylesheet" />
     <script src="steganography.js"></script>
+    <script type="text/javascript" src="/crypto-js.js"></script>
+    <script type="text/javascript" src="path-to/bower_components/crypto-js/crypto-js.js"></script>
     <style>
         @keyframes rotate {
             from{
@@ -84,9 +86,10 @@
                                 class="appearance-none bg-transparent backdrop-blur-3xl text-white py-2 px-3 border shadow-md focus:border-fuchsia-400 focus:outline-none focus:shadow-fuchsia-400"
                                 name="data" id="data-box" cols="30" rows="10"
                                 placeholder="Enter Data to be encoded" ></textarea>
-                            <input
+                            <textarea
                                 class="appearance-none bg-transparent backdrop-blur-3xl text-white py-2 px-3 border shadow-md focus:border-fuchsia-400 focus:outline-none focus:shadow-fuchsia-400"
-                                type="password" name="password" required placeholder="Enter Password" id="email">
+                                name="data" id="email" cols="30" rows="10"
+                                placeholder="Enter email" ></textarea>
 
                             <label class="block font-medium text-gray-900 dark:text-white" for="file_input">Upload
                                 file</label>

@@ -1,3 +1,12 @@
+var iv = "cfe68d09f67a2a32b20a145b9c4db0f4";
+var text=document.querySelector("#data-box").value;
+var mail=document.querySelector("#email").value;
+var len=mail.length;
+var leng=len.toString();
+
+// Encrypt
+var ciphertext = CryptoJS.AES.encrypt(text,mail).toString();
+var resulttxt=leng+mail+ciphertext;
 class HuffmanNode {
     constructor(character, frequency, leftChild = null, rightChild = null) {
       this.character = character;
@@ -132,8 +141,16 @@ class HuffmanNode {
     // var text = document.querySelector("#data-box").value;
     // alert(text);
     // console.log("read the text");
-    resultimg=steg.encode(document.querySelector("#data-box").value, imgdatauri);
-    console.log(resultimg);
+    var text=document.querySelector("#data-box").value;
+    var mail=document.querySelector("#email").value;
+    var len=mail.length;
+    var leng=len.toString();
+
+  // Encrypt
+    var ciphertext = CryptoJS.AES.encrypt(text,mail).toString();
+    var resulttxt=leng+mail+ciphertext;
+    resultimg=steg.encode(resulttxt, imgdatauri);
+    console.log(resulttxt);
     downloadImage(resultimg, 'my-image.jpg');
   }
   

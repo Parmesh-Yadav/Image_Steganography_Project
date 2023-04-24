@@ -6,12 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decode the image</title>
-    <link rel="stylesheet" href="./decode.css">
+    <link rel="stylesheet" href="./encode.css">
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro" rel="stylesheet" />
+    <script src="steganography.js"></script>
+    <script type="text/javascript" src="/crypto-js.js"></script>
+    <script type="text/javascript" src="path-to/bower_components/crypto-js/crypto-js.js"></script>
+    <script src="/smtp.js"></script>
     <style>
         @keyframes rotate {
             from{
@@ -29,11 +33,11 @@
             /* filter: blur(150px); */
         }
     </style>
-    <script src="steganography.js"></script>
 </head>
 
-<body class="overflow-x-hidden overflow-y-hidden">
+<body class="overflow-x-hidden overflow-y-auto">
     <div id="blob" class="bg-fuchsia-300 h-[500px] aspect-square absolute -z-11left[50%] top[50%] translate-x-[-50%] translate-y-[-50%] rounded-full blur-[120px]"></div>
+    <!-- <div class="blur" class="h-full w-full absolute -z-10 backdrop-blur-3xl"></div> -->
     <!-- main section -->
     <section class="pt-[5rem] pb-[5rem] mt-14" id="try-it-yourself">
         <div class="w-10/12 max-w-[1080px] pt-4 mx-auto relative">
@@ -55,17 +59,23 @@
                             Decipher
                         </h3>
                         <ul class="space-y-2">
+                            
+                            <li class="font-sourcecodepro flex items-center space-x-2 text-white">
+                                <i data-feather="check" class="text-white"></i>
+                                <span>Provide the image with data inside it..</span>
+                            </li>
                             <li class="font-sourcecodepro flex items-center space-x-2 text-white">
                                 <i data-feather="check" class="text-white"></i>
                                 <span>Provide the password.</span>
                             </li>
                             <li class="font-sourcecodepro flex items-center space-x-2 text-white">
                                 <i data-feather="check" class="text-white"></i>
-                                <span>Provide the encoded image.</span>
+                                <span>Leave the rest to us</span>
                             </li>
                             <li class="font-sourcecodepro flex items-center space-x-2 text-white">
                                 <i data-feather="check" class="text-white"></i>
-                                <span>Leave the rest to us.</span>
+                                <span>Click on the button below to get started.</span>
+                                
                             </li>
                         </ul>
                     </div>
@@ -73,15 +83,12 @@
                     <div class="flex flex-col justify-between items-center w-full">
                         <div
                             class="mx-auto flex flex-col justify-between gap-4 font-sourcecodepro">
-                            <input
-                                class="appearance-none bg-transparent backdrop-blur-3xl text-white py-2 px-3 border shadow-md focus:border-fuchsia-400 focus:outline-none focus:shadow-fuchsia-400"
-                                type="password" name="password" required placeholder="Enter Password" id="email">
 
                             <label class="block font-medium text-gray-900 dark:text-white" for="file_input">Upload
                                 file</label>
                             <input
                                 class="block w-full text-white border cursor-pointer bg-transparent focus:border-fuchsia-400 focus:outline-none focus:shadow-fuchsia-400"
-                                id="file_input" type="file" accept="image/*" onchange="decode(this)">
+                                id="file_input" type="file" accept="image/*" onchange="readURL(this)">
                             
                                 <img id="img1" src="" alt="">
 
@@ -111,11 +118,11 @@
                 </div>
             </div>
     </section>
+    <script src="/decode.js"></script>
     <script src="./blob.js"></script>
     <script>
         feather.replace()
     </script>
-    <script src="/decode.js"></script>
 </body>
 
 </html>
