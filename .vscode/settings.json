@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/e5d4e569-dca0-4142-8333-9de8930b5492/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/steganographyonline",
+    "appService.deploySubpath": "."
+}
